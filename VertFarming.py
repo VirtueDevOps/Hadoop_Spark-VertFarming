@@ -1,15 +1,16 @@
 from pyspark import SparkContext
 from pyspark.sql import SparkSession
+from pyspark.sql.functions import sum as pyspark_sum
 
 # Initialize Spark context and Spark SQL
 sc = SparkContext()
-spark = SparkSession(sc)
+spark = SparkSession.builder.appName("Vertical Farming Estimation").getOrCreate()
 
 # Read in data on office buildings in major cities
-df = spark.read.csv("office_buildings.csv", header=True)
+df = spark.read.csv("office_buildings.csv", header=True, inferSchema=True)
 
 # Calculate the total square footage of office space in major cities
-total_sqft = df.select(df["square_footage"]).sum()
+total_sqft = df.agg(pyspark_sum(df["square_footage"])).collect()[0][0]
 
 # Estimate the amount of food that could be produced by converting office space into vertical farming centers
 # Assume that each square foot of space can produce 10 pounds of food per year
@@ -26,3 +27,4 @@ print(f"Using sustainable energy sources could save approximately ${savings} per
 
 # Stop Spark context
 sc.stop()
+
