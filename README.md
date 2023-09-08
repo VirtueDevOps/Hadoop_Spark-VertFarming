@@ -1,8 +1,49 @@
-# Hadoop_Spark-VertFarming
+## Hadoop/Spark Vertical Farming Estimator
 
-Another whacky idea. What if we can help determine how much more food would be available world wide if existing office buildings in major cities were converted into vertical farming centers, and used sustainable energy sources to power them.
+Welcome to the Hadoop/Spark Vertical Farming Estimator project! This script ventures into the revolutionary concept of transforming existing office buildings in major cities into self-sustained vertical farming centers, leveraging renewable energy sources for operation.
 
-This script uses Spark to read in data on office buildings in major cities, calculate the total square footage of office space, and estimate the amount of food that could be produced by converting that space into vertical farming centers. You can customize this script with your own data and assumptions about food production to get a more accurate estimate of the potential impact of converting office buildings into vertical farming centers.
-Hadoop is not used directly. Instead, the script uses Spark, which is a distributed computing platform that can run on top of Hadoop. Hadoop can be used to store and manage the data that is processed by Spark, as well as to provide a distributed computing platform for Spark to run on. In this way, Hadoop and Spark can be used together to perform large-scale data processing tasks efficiently.
+### Concept
 
-This script includes a section to estimate the potential savings on utilities if the vertical farming centers used sustainable energy sources like solar, geothermal, and hydro. The script assumes that these sources are 50% cheaper than traditional electricity and calculates the savings based on the total square footage of office space and an assumed electricity consumption rate of 5 kilowatt-hours per year per square foot.
+Imagine the global food production potential if we could convert metropolitan office spaces into vertical farming centers, substantially boosted with the integration of sustainable energy resources like solar, geothermal, and hydro power. This script aids in conceptualizing this transformation by estimating the food production capacity and potential utility savings that could be achieved.
+
+### Working
+
+The script operates in the following phases:
+
+1. **Data Ingestion**:
+   - Reads in data on office buildings in major cities using Apache Spark.
+   
+2. **Food Production Estimation**:
+   - Calculates the total square footage of office space and estimates the prospective amount of food production.
+
+3. **Utility Savings Estimation**:
+   - Assumes a 50% cost reduction using sustainable energy sources compared to conventional electricity.
+   - Estimates savings based on an assumed electricity consumption rate of 5 kilowatt-hours per year per square foot.
+
+### Customization
+
+Users have the freedom to tailor the script according to their data and assumptions regarding food production to generate more accurate estimates. 
+
+### Prerequisites
+
+To run the script, ensure you have the following set up:
+
+- Hadoop: Although not directly utilized, it provides a potent platform for storing and managing the data processed by Spark.
+- Apache Spark: Acts as the computational engine executing data processing tasks.
+
+### Getting Started
+
+1. Install Apache Spark and Hadoop in your working environment.
+2. Clone this repository to acquire the script and relevant datasets.
+3. Load your data and modify the script to suit your assumptions for a personalized estimation.
+
+### Usage
+
+Run the script to calculate:
+- The total square footage available for conversion into vertical farms.
+- Estimated food production from the vertical farms.
+- Potential utility savings using sustainable energy sources.
+
+### Contributions
+
+Feel free to contribute to this forward-thinking project to foster an era of sustainable and urban agriculture.
